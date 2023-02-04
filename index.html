@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>click to get random number</button>
+    <p></p>
+    
+
+    <script>
+        let btn = document.querySelector('button')
+        let para = document.querySelector('p')
+
+        let random = []
+        function randomnumbers(){
+            const num = Math.floor(Math.random()*10)
+            if(random.includes(num)){
+                para.innerHTML = 'this is not a unique number'
+            }
+            else{
+                random.push(num)
+                 para.innerHTML = 'this  a unique number' + " " +num
+            }
+            console.log(random)
+        }
+        btn.onclick = () =>{
+            randomnumbers()
+        }
+
+
+    </script>
+</body>
+</html>
